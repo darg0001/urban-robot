@@ -23,7 +23,7 @@ I added some code for that and sent my first PR. He reviewed it and merged it in
 
 Another issue mentioned the prospect of converting the project into a command-line based chatbot. I took up the task of doing it, and added options for the user to choose to respond to sarcastic comments on Reddit himself/herself or let the bot do that itself or even to leave the comment as it is. Well, we don't want to interfere in something we don't have knowledge about, do we !?
 
-So I wrote a separate file with the code for the CLI based bot. I tested it throughly and sent a PR. My mentor reviewed it and merged it immediately.
+So I wrote a separate file with the code for the CLI based bot. I tested it thoroughly and sent a PR. My mentor reviewed it and merged it immediately.
 
 ![](images/pr-2.png)
 
