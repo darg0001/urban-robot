@@ -1,72 +1,32 @@
-# Urban Robot
+# KWoC – KHARAGPUR WINTER OF CODE
 
-![Urban Robot](ub.png)
+A one month long program for introduction to open source community and a providing preface to budding developers to Google Summer of Code’ 2017. Organised by students at Kharagpur Open Source Society (KOSS), IIT Kharagpur.
 
-Reddit bot which replies to sarcastic comments
+# Choosing the Project
+
+I went through the descriptions of all the projects registered in KWoC'17. Since I was just getting started in the world of NLP, I decide to work on a project based on the same. So, I chose [**urban-robot**](https://github.com/mubaris/urban-robot). It is a Reddit bot which replies to sarcastic comments. My mentor for this project was [Mubaris NK](https://github.com/mubaris).
+
+# Progress
+
+I forked and cloned the repo, installed all the dependencies, set up a Reddit App, updated some config files (like `praw.ini`) and I was ready with my development environment.
+
+## [Pull Request-1 (December 4, 2017)](https://github.com/mubaris/urban-robot/pull/5)
+
+The first issue was quite simple, I had to just make the output of accuracies of the bot (using the various ML models), output in a single file rather than on the console.
+
+I added some code for that and sent my first PR. He reviewed it and merged it in a few days.
+
+![](images/pr-1.png)
 
 
-## Libraries
+## [Pull Request-2 (December 22, 2017)](https://github.com/mubaris/urban-robot/pull/6)
 
-* numpy, scipy - For Mathematical and Scientific processes
-* nltk - NLP Application
-* scikit - Model Training and Feature Extraction
-* textblob - Sentiment Analysis
-* pickle - Pickling Models and Vectorizers
-* langdetect - Language Detection of comments
-* praw - Reddit Bot
+Another issue mentioned the prospect of converting the project into a command-line based chatbot. I took up the task of doing it, and added options for the user to choose to respond to sarcastic comments on Reddit himself/herself or let the bot do that itself or even to leave the comment as it is. Well, we don't want to interfere in something we don't have knowledge about, do we !?
 
-## Features Used
+So I wrote a separate file with the code for the CLI based bot. I tested it throughly and sent a PR. My mentor reviewed it and merged it immediately.
 
-* Sentiment Analysis of full text, equal 2 and 3 parts of text
-* n-grams - 1 to 5
-* Term Frequency–Inverse Document Frequency(TF-IFD) after stemming, tokenizing and using n-grams of 1 to 5
-* Part of Speech Dictionary Vector
-* Topic Modeling
+![](images/pr-2.png)
 
-## Data Preprocessing
+# Verdict
 
-* Removed URLs
-* Removed Stopwords
-* Removed words with less than 4 tokens
-
-## Model Training and Classification
-
-Using above Features and Preprocessing 4 models are trained,
-
-* Logistic Regression
-* Linear SVM
-* SVM with Gaussian Kernel
-* Random Forest
-
-If a comment is predicted as 'sarcastic' by 3 out 4 models, it is treated as sarcastic.
-
-## Files
-
-* `classifier.py` - Training and Testing Models
-* `bot.py` - Reddit Bot
-* `cli_bot.py` - A Command Line Interactive Interface for the Reddit Bot
-* `main.ipynb` - iPython Notebook led to the final model hypothesis
-
-## Running
-
-1. Register for new Reddit App [here](https://www.reddit.com/prefs/apps/) and fill details (username, password, client id, client secret) under name 'bot1' in `praw.ini`
-
-2. Run `classifier.py` with Python 3(Optional) or use pretrained models
-
-3. Run `bot.py` with Python 3 for the automated Reddit Bot
-
-4. Run `cli_bot.py` with Python 3 for an interactive version of the Reddit Bot.
-
-That's it.
-
-Logs can accessed at `comment.log`
-
-How to fill [praw.ini](https://praw.readthedocs.io/en/v4.0.0/getting_started/configuration/prawini.html)
-
-Final accuracy of models are in `final_accuracy.txt`
-
-## Dataset
-
-Dataset is available in `container`
-
-Downloaded from [here](https://nlds.soe.ucsc.edu/sarcasm1)
+KWoC was my first experience with proper Open Source contributions and development. It felt good seeing the PRs getting merged. It was a great learning experience.
